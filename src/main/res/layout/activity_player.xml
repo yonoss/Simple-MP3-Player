@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Player"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@drawable/back"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+
+    <ScrollView
+        android:id="@+id/scrollFilesView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/scrollFilesList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="25dp"
+        android:background="#b3ffffff"
+        android:textColor="#000000"
+        android:inputType="text"
+        android:hint="  Search..."
+        android:focusable="true"
+        android:focusableInTouchMode="true"/>
+    <requestFocus />
+
+    <Button
+        android:id="@+id/addFiles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_files"
+        android:background="#b3ffffff"
+        android:textColor="#000000"
+        android:textSize="35sp"
+        android:onClick="clickAddFiles"/>
+
+
+    <Button
+        android:id="@+id/shuffle"
+        android:drawableLeft="@drawable/shuffle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b3ffffff"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="8dp"
+        android:onClick="setShuffle"/>
+
+    <Button
+        android:drawableLeft="@drawable/play"
+        android:id="@+id/playPause"
+        android:text="Play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b3ffffff"
+        android:drawablePadding="5dp"
+        android:onClick="pausePlay"/>
+
+    <Button
+        android:drawableLeft="@drawable/next"
+        android:id="@+id/next"
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b3ffffff"
+        android:drawablePadding="5dp"
+        android:onClick="playNext"/>
+
+    <Button
+        android:drawableLeft="@drawable/prev"
+        android:id="@+id/prev"
+        android:text="Prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#b3ffffff"
+        android:drawablePadding="5dp"
+        android:onClick="playPrevious"/>
+
+        <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#b3ffffff"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

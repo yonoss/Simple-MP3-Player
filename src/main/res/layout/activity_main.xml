@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:background="@drawable/back"
+        android:scaleType="centerCrop"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/scrollList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+        </LinearLayout>
+    </ScrollView>
+
+    <!--    android:drawableLeft="@drawable/plus"
+                android:divider="?android:listDivider"
+            android:dividerPadding="30px"
+            android:showDividers="middle"-->
+    <Button
+        android:id="@+id/addList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_list"
+        android:background="#b3ffffff"
+        android:textAllCaps="false"
+        android:drawablePadding="5dp"
+        android:textColor="#000000"
+        android:textSize="40sp"
+        android:onClick="clickAddNewList"
+        android:paddingLeft="10dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
