@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SMP</string>
+    <string name="new_list">+ Add new playlist</string>
+    <string name="add_files">+</string>
+    <string name="search">   Search...</string>
+</resources>
